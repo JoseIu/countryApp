@@ -1,0 +1,32 @@
+.aside {
+  //   background-color: violet;
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  &__title {
+    padding-bottom: 0.2em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 0.0625rem solid #22222279;
+  }
+
+  &__ul {
+    border: 1px solid #22222233;
+    border-radius: 0.3em;
+    overflow: hidden;
+    // background-color: aliceblue;
+  }
+
+  &__li {
+    padding: 0.3em;
+    border-bottom: 1px solid #22222233;
+    cursor: pointer;
+  }
+  &__li--active {
+    background-color: rgba(0, 0, 255, 0.651);
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+}
