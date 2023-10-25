@@ -1,10 +1,10 @@
 .aside {
   //   background-color: violet;
   padding: 1em;
-
   display: flex;
   flex-direction: column;
   row-gap: 2em;
+
   &__title {
     padding-bottom: 0.2em;
     font-size: 1.5rem;
@@ -13,16 +13,30 @@
   }
 
   &__ul {
+    max-width: 25em;
+    width: 20em;
+    margin: auto;
     border: 1px solid #22222233;
     border-radius: 0.3em;
     overflow: hidden;
-    // background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: 1100px) {
+      display: initial;
+      margin: initial;
+    }
   }
 
   &__li {
+    width: 1005;
     padding: 0.3em;
-    border-bottom: 1px solid #22222233;
+    text-align: center;
     cursor: pointer;
+    @media screen and (min-width: 1100px) {
+      border-bottom: 1px solid #22222233;
+      text-align: left;
+    }
   }
   &__li--active {
     background-color: rgba(0, 0, 255, 0.651);
