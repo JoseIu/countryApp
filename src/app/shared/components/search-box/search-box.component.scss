@@ -1,0 +1,9 @@
+.search-input {
+  width: 100%;
+  padding: 0.2em 0.3em;
+  border: 0.0625rem solid #222;
+  border-radius: 0.3em;
+}
+.search-input:focus {
+  border: 0.0625rem solid rgba(71, 71, 245, 0.808);
+}

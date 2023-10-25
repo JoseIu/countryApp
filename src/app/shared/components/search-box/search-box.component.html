@@ -1,0 +1,9 @@
+<input
+  class="search-input"
+  type="text"
+  name="search"
+  id="search"
+  [placeholder]="placeholder"
+  (keyup.enter)="emitValue(txtInput.value)"
+  #txtInput
+/>
