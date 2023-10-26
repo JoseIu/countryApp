@@ -1,7 +1,7 @@
 <div *ngIf="!countries.length; else table">No hay países que mostrar</div>
 
 <ng-template #table>
-  <table>
+  <table class="table">
     <thead>
       <tr>
         <th>#</th>
@@ -20,7 +20,7 @@
         <td>{{ country.flag }}</td>
         <td>
           <img
-            class="country__img"
+            class="table__img"
             [src]="country.flags.svg"
             [alt]="country.name.common"
           />
