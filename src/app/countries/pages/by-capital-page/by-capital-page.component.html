@@ -1,12 +1,10 @@
-<section class="capital">
-  <h2 class="capital__title">Por Capital</h2>
-  <div class="">
-    <shared-search-box
-      placeholder="buscar por capital"
-      (onValue)="searchByCapital($event)"
-    ></shared-search-box>
-  </div>
+<section class="country">
+  <h2 class="country__title">Por Capital</h2>
 
+  <shared-search-box
+    placeholder="buscar por capital"
+    (onValue)="searchByCapital($event)"
+  ></shared-search-box>
   <div class="results">
     <countries-table [countries]="countries"></countries-table>
   </div>

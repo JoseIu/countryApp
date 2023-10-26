@@ -1,0 +1,13 @@
+.country {
+  padding: 1em;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  &__title {
+    padding-bottom: 0.2em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom: 0.0625rem solid #22222279;
+  }
+}
