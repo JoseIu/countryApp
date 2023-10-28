@@ -4,6 +4,6 @@
   name="search"
   id="search"
   [placeholder]="placeholder"
-  (keyup.enter)="emitValue(txtInput.value)"
+  (keyup)="onKeyPress(txtInput.value)"
   #txtInput
 />

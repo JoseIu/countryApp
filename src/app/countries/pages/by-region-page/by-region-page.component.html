@@ -2,7 +2,7 @@
   <h2 class="country__title">Por Región</h2>
   <shared-search-box
     placeholder="Buscar por región"
-    (onValue)="searchRegion($event)"
+    (onDebouncer)="searchRegion($event)"
   ></shared-search-box>
 
   <div class="results">
