@@ -6,6 +6,12 @@
     (onValue)="searchByCapital($event)"
   ></shared-search-box>
   <div class="results">
-    <countries-table [countries]="countries"></countries-table>
+    <div class="loader" *ngIf="isLoading; else isNotLoading">
+      <app-loader></app-loader>
+    </div>
+
+    <ng-template #isNotLoading>
+      <countries-table [countries]="countries"></countries-table>
+    </ng-template>
   </div>
 </section>
