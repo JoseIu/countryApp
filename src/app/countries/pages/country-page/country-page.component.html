@@ -1,38 +1,45 @@
-<section class="country">
+<section class="country-info">
   <ng-template #loading>
-    <span>CARGANDO.............</span>
+    <app-loader></app-loader>
   </ng-template>
 
-  <div class="country" *ngIf="country; else loading">
-    <h2>{{ country.name.common }}</h2>
-    <div class="country__left">
-      <p class="country__bander">Bandera</p>
-      <img [src]="country.flags.svg" [alt]="country.name.common" />
-    </div>
+  <div class="country-info__container" *ngIf="country; else loading">
+    <h2 class="country-info__title">{{ country.name.common }}</h2>
 
-    <div class="country__right">
-      <p>Población: {{ country.population | number }}</p>
-      <p>Código: {{ country.cca3 }}</p>
-    </div>
+    <div class="country-info__content">
+      <div class="country-info__left">
+        <p class="country-info__bander">Bandera</p>
+        <img
+          class="country-info__img"
+          [src]="country.flags.svg"
+          [alt]="country.name.common"
+        />
+      </div>
 
-    <div class="country_translate">
-      <h3 class="country__translate-title">Traducciones</h3>
-      <ul class="country__translate-list">
-        <li class="country__translate-item">
-          {{ country.translations["spa"].official }}
-        </li>
-        <li class="country__translate-item">
-          {{ country.translations["fra"].official }}
-        </li>
+      <div class="country-info__right">
+        <p>Población: {{ country.population | number }}</p>
+        <p>Código: {{ country.cca3 }}</p>
+      </div>
 
-        <li class="country__translate-item">
-          {{ country.translations["ita"].official }}
-        </li>
+      <div class="country-info__translate">
+        <h3 class="country-info__translate-title">Traducciones</h3>
+        <ul class="country-info__translate-list">
+          <li class="country-info__translate-item">
+            {{ country.translations["spa"].common }}
+          </li>
+          <li class="country-info__translate-item">
+            {{ country.translations["fra"].common }}
+          </li>
 
-        <li class="country__translate-item">
-          {{ country.translations["jpn"].official }}
-        </li>
-      </ul>
+          <li class="country-info__translate-item">
+            {{ country.translations["ita"].common }}
+          </li>
+
+          <li class="country-info__translate-item">
+            {{ country.translations["jpn"].common }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
