@@ -1,10 +1,19 @@
 <section class="country">
   <h2 class="country__title">Por Región</h2>
-  <shared-search-box
+  <!-- <shared-search-box
     placeholder="Buscar por región"
     (onDebouncer)="searchRegion($event)"
-  ></shared-search-box>
-
+  ></shared-search-box> -->
+  <ul class="country__list">
+    <li
+      *ngFor="let region of regions"
+      class="country__list-item"
+      [ngClass]="{ 'country__list-item--selected': selectedRegion === region }"
+      (click)="searchRegion(region)"
+    >
+      {{ region }}
+    </li>
+  </ul>
   <div class="results">
     <countries-table [countries]="countries"></countries-table>
   </div>
