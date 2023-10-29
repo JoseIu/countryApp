@@ -3,8 +3,11 @@
 
   <shared-search-box
     placeholder="buscar por capital"
+    [initialValue]="initialValue"
     (onDebouncer)="searchByCapital($event)"
   ></shared-search-box>
+
+  <!--LOADER-->
   <div class="results">
     <div class="loader" *ngIf="isLoading; else isNotLoading">
       <app-loader></app-loader>
